@@ -6,7 +6,16 @@ const Shop = () => {
     //state controller
     //useState hook returns array
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
 
+    //Handler for lower level component product then pass it where it need
+    const handleAddToCart = (product) => {
+        //Change state on every click
+
+        //Copy the cart's data and add clicked one since state is immutable
+        const newCart = [...cart, product];
+        setCart(newCart);
+    }
     //Fetch data
     useEffect(() => {
         fetch('products.json')
@@ -21,11 +30,12 @@ const Shop = () => {
                     products.map(product => <Product
                         key={product.id}
                         product={product}
+                        handleAddToCart={handleAddToCart}
                     ></Product>)
                 }
             </div>
             <div className='cart-container'>
-                Order Summury
+                <p>Selected Items: {cart.length}</p>
             </div>
         </div>
     );
