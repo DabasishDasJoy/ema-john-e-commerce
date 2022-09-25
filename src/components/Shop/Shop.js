@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredCart } from "../../utilities/fakedb";
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -16,14 +17,31 @@ const Shop = () => {
         //Copy the cart's data and add clicked one since state is immutable
         const newCart = [...cart, product];
         setCart(newCart);
+        addToDb(product.id);
     }
     //Fetch data
     useEffect(() => {
+        
         fetch('products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
+        
     }, []);
 
+    //previous cart
+    useEffect(() =>{
+        const storedCart = getStoredCart();
+        const newCart = [];
+        for (const id in storedCart) {
+            const savedCart = products.find(product => product.id === id);
+            if(savedCart){
+                savedCart.quantity = storedCart[id];
+                newCart.push(savedCart);
+            }
+        }
+        setCart(newCart);
+    }, [products])
+    
     return (
         <div className='shop-container'>
             <div className='product-container'>
