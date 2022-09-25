@@ -1,0 +1,28 @@
+.cart {
+  padding: 20px 45px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+}
+.cart-title {
+  text-align: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #1c2b35;
+  margin-bottom: 0;
+}
+.cart-calculation {
+  margin-top: 0;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+
+  color: #2a414f;
+}
