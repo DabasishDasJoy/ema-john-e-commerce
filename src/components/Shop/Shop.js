@@ -11,13 +11,24 @@ const Shop = () => {
     const [cart, setCart] = useState([]);
 
     //Handler for lower level component product then pass it where it need
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (selectedProduct) => {
         //Change state on every click
 
         //Copy the cart's data and add clicked one since state is immutable
-        const newCart = [...cart, product];
+        let newCart = [];
+        const exist = cart.find(product => product.id === selectedProduct.id);
+        if(exist){
+            const rest = cart.filter(product => product.id !== exist.id);
+            exist.quantity = exist.quantity + 1;
+            newCart = [...rest, exist];
+        }
+        else{
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct];
+        }
+        
         setCart(newCart);
-        addToDb(product.id);
+        addToDb(selectedProduct.id);
     }
     //Fetch data
     useEffect(() => {
