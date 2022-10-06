@@ -1,0 +1,66 @@
+.review-item-container {
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: 571px;
+  margin: 21px auto;
+}
+.review-item-details,
+.review-item-img-container {
+  margin: 8px;
+}
+.review-item-img-container img {
+  width: 91px;
+  border-radius: 8px;
+}
+.review-item-details {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.review-details h6,
+p {
+  margin: 8px 0;
+}
+.review-details p {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: 0.0025em;
+
+  color: #1c2b35;
+}
+
+.review-details span {
+  color: #ff9900;
+}
+.review-title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+
+  color: #1c2b35;
+}
+
+/* Delete Button */
+.delete-button {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(235, 87, 87, 0.3);
+  border-radius: 50%;
+  border: none;
+}
+.delete-icon {
+  font-size: 31px;
+  color: #eb5757;
+}
