@@ -3,11 +3,13 @@ import "./App.css";
 import About from "./components/About/About";
 import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
+import OrderProceed from "./components/OrderProceed/OrderProceed";
 import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
 import SignUp from "./components/SingUp/SignUp";
 import Main from "./layouts/Main";
 import { productsAndCartLoader } from "./loader/productsAndCartLoader";
+import PrivateRoute from "./Routes/PrivateRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +42,14 @@ function App() {
         {
           path: "signup",
           element: <SignUp></SignUp>,
+        },
+        {
+          path: "/proceed",
+          element: (
+            <PrivateRoute>
+              <OrderProceed></OrderProceed>{" "}
+            </PrivateRoute>
+          ),
         },
       ],
     },

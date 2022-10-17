@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
+import "./Orders.css";
 
 const Orders = () => {
   const { previousCart } = useLoaderData();
@@ -26,8 +27,8 @@ const Orders = () => {
       </div>
       <div className="cart-container">
         <Cart cart={cart}>
-          <Link to={"/orders"}>
-            <button>Go to orders</button>
+          <Link to={"/proceed"}>
+            <button className="btn-proceed">Proceed Order</button>
           </Link>
         </Cart>
       </div>
