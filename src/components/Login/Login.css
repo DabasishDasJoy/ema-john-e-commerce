@@ -1,0 +1,102 @@
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form-container h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  /* identical to box height */
+
+  letter-spacing: 0.0025em;
+
+  color: #2a414f;
+}
+
+.login-form {
+  margin: 80px auto;
+  width: 500px;
+  height: 600px;
+  background: #ffffff;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 415px;
+  height: 84px;
+}
+.form-control label {
+  display: block;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.0015em;
+
+  color: #2a414f;
+}
+.form-control input {
+  height: 50px;
+
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  width: 415px;
+  height: 55px;
+  margin-top: 20px;
+  background: rgba(255, 153, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+
+  color: #0e161a;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.create-ac {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: 0.0025em;
+
+  color: #2a414f;
+}
+
+.create-ac-link {
+  color: #ff9900;
+}
+
+.error {
+  color: rgb(207, 57, 57);
+  text-align: center;
+}

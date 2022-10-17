@@ -60,6 +60,10 @@ p {
   border-radius: 50%;
   border: none;
 }
+.delete-button:hover {
+  cursor: pointer;
+  background-color: rgba(235, 87, 87, 0.5);
+}
 .delete-icon {
   font-size: 31px;
   color: #eb5757;
